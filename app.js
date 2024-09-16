@@ -42,6 +42,13 @@ document.addEventListener('DOMContentLoaded', () => {
 			.then((res) => res.json())
 			.then((data) => {
 				console.log(data);
+        document.getElementById('container').insertAdjacentHTML('afterbegin',`
+          <div class='content-container'>
+              <h1 class='title'>${data.title}</h1>
+              <p class='content'>${data.body}</p>
+              <hr>
+          </div>
+        `)
 			});
 	});
 });
