@@ -1,26 +1,24 @@
 <html lang="en">
-	<head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
-		<title>Mizuka Blogs</title> 
-	</head>
-	<body>
-
-        <nav>
-          <h3>Mizuka Blogs</h3>
-      </nav>
-      <main>
-        <div id="container"></div>
+    <title>Mizuka Blogs</title>
+</head>
+<body>
+    <nav>
+        <h3>Mizuka Blogs</h3>
+    </nav>
+    <main>
         <form>
             <label for="title-text">Title:</label>
-            <input type="text" id="title-text">
+            <input type="text" id="title-text" placeholder="Enter your title">
             <label for="content-text">Body:</label>
-            <textarea id="content-text"></textarea>
+            <textarea id="content-text" placeholder="Write your content..."></textarea>
             <button type="submit">POST</button>
         </form>
+        <div id="container"></div>
     </main>
-     
     <script src="app.js"></script>
-	</body>
+</body>
 </html>
