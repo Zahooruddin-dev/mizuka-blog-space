@@ -7,9 +7,16 @@ fetch(url, { method: 'GET' })
 		console.log(postArr);
 		let html = '';
 		for (const element of postArr) {
-			html += `  <h1 id="title">${element.title}</h1>
-        <h2 id="content">${element.body}</h2>
-        <hr>`;
+			html += `
+<div class="wrapper">
+        <div class='content-container'>
+            <h1 id="title" class='title'>${element.title}</h1>
+            <p class="content">${element.body}</p>
+            <hr>
+        </div>
+       
+`
+    ;
 		}
 		document.getElementById('container').innerHTML = html;
 	});
