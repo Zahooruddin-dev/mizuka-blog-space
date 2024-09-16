@@ -1,16 +1,26 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <title>Mizuka Blogs</title>
-    </head>
-    <body>
-      <div class="wrapper">
+<html lang="en">
+	<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+		<title>Mizuka Blogs</title> 
+	</head>
+	<body>
 
-      <div class="container" id="container">
-      </div>
-    </div>
-
-    
-        <script src="app.js"></script>
-    </body>
+        <nav>
+          <h3>Mizuka Blogs</h3>
+      </nav>
+      <main>
+        <div id="container"></div>
+        <form>
+            <label for="title-text">Title:</label>
+            <input type="text" id="title-text">
+            <label for="content-text">Body:</label>
+            <textarea id="content-text"></textarea>
+            <button type="submit">POST</button>
+        </form>
+    </main>
+     
+    <script src="app.js"></script>
+	</body>
 </html>
