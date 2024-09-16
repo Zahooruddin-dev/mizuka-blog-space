@@ -3,8 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	fetch(url, { method: 'GET' })
 		.then((res) => res.json())
 		.then((data) => {
-			
-
 			const postArr = data.slice(0, 3); // Adjust as needed
 			let html = '';
 			for (const element of postArr) {
@@ -16,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
         `;
 			}
-
 			document.getElementById('container').innerHTML = html;
 		})
 		.catch((error) => {
@@ -24,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			document.getElementById('container').innerHTML =
 				'<h1>Please try again Failedto load content</h1>';
 		});
-	
+
 	document.querySelector('form').addEventListener('submit', (event) => {
 		event.preventDefault();
 		const postTitle = document.getElementById('title-text').value;
@@ -34,5 +31,17 @@ document.addEventListener('DOMContentLoaded', () => {
 			body: postBody,
 		};
 		console.log(dataObject);
+		const post = {
+			method: 'POST',
+			body: JSON.stringify(dataObject),
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		};
+		fetch(url, post)
+			.then((res) => res.json())
+			.then((data) => {
+				console.log(data);
+			});
 	});
 });
